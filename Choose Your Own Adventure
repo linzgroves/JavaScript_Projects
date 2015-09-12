@@ -1,0 +1,36 @@
+var user = prompt("You arrive at the playground and see a kid push another kid off the swing. What do you do? Type CONFRONT, IGNORE, or LEAVE.").toLowerCase();
+
+switch(user) {
+    case 'confront':
+        var words = prompt("Alright! Are you skilled with words?(YES or NO?").toLowerCase();
+        var intimidate = prompt("Are you intimidating?").toLowerCase();
+        if(words === 'yes' || intimidate === 'yes') {
+            console.log("You only need one of the two! You made the bully leave - nice job!");
+        } else {
+            console.log("You're not skilled with words OR intimidating? Well, before trying to confront a bully, make sure to have a plan next time so you don't get pushed to the ground too.");
+        }
+        break;
+        
+    case 'ignore':
+        var play = prompt("Ok, so are you planning to just play nearby (YES or NO)?").toLowerCase();
+        var watch = prompt("Are you going to watch the bully continue being awful?");
+        if(play === 'yes' && watch === 'yes') {
+            console.log("Great. You can ignore for now and feel terrible about yourself.");
+        } else {
+            console.log("Whether you play or watch, you're letting someone be cruel and that's not cool. Boo!");
+        }
+        break;
+        
+    case 'leave':
+        var help = prompt("Hmm. Are you leaving to get more help (YES or NO)?").toLowerCase();
+        var good = prompt("Or are you really just going to end up leaving for good without bringing any help back (YES or NO)?");
+        if(help === 'yes' && good === 'no') {
+            console.log("I can respect that. Now, go get some help before the bully gets away.");
+        } else {
+            console.log("The only right thing to do here if you can't confront the bully is to get someone else to step in here. Isn't that what you'd want someone to do for you?");
+        }
+        break;
+        
+    default:
+        console.log("I didn't understand your choice. Hit 'Run' and try again, this time picking CONFRONT, IGNORE, or LEAVE!");
+}
