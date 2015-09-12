@@ -1,0 +1,57 @@
+var correctAnswers = 0;
+//Ask 5 questions
+var questions = 5;
+//Sets up tracking # of ?s user has left
+var questionsLeft = ' [' + questions + ' questions left]';
+var one = prompt("What is 2+3?" + questionsLeft);
+questions -= 1;
+questionsLeft = ' [' + questions + ' questions left]';
+if ( one === '5' ) {
+  console.log(correctAnswers += 1);
+} else {
+  alert("Sorry, that's incorrect.  Better luck on the next question!");
+}
+var two = prompt("What color is the sky?" + questionsLeft);
+questions -= 1;
+questionsLeft = ' [' + questions + ' questions left]';
+if ( two.toUpperCase() === 'BLUE') {
+  console.log(correctAnswers += 1);
+} else {
+  alert("Sorry, that's incorrect.  Better luck on the next question!");
+}
+var three = prompt("What animal is better: a cat or a dog?" + questionsLeft);
+questions -= 1;
+questionsLeft = ' [' + questions + ' questions left]';
+if ( three.toUpperCase() === 'CAT') {
+  console.log(correctAnswers += 1);
+} else {
+  alert("Sorry, that's incorrect.  Better luck on the next question!");
+}
+var four = prompt("What does the 'U' stand for in U.S.A.?" + questionsLeft);
+questions -= 1;
+questionsLeft = ' [' + questions + ' questions left]';
+if ( four.toUpperCase() === 'UNITED') {
+  console.log(correctAnswers += 1);
+} else {
+  alert("Sorry, that's incorrect.  Better luck on the next question!");
+}
+var five = prompt("What is the best way to learn how to code?" + questionsLeft);
+if ( five.toUpperCase() === 'TREEHOUSE') {
+  console.log(correctAnswers += 1);
+} else {
+  alert("Sorry, that's incorrect.");
+}
+
+var sentence = "<h2>You correctly answered " + correctAnswers + " out of 5 questions.</h2>"
+document.write(sentence);
+
+//Rank the player (0: no medal, 1-2: bronze, 3-4: silver, 5: gold)
+
+if (correctAnswers === 5) {
+  alert("You earned a gold crown!");
+} else if ( correctAnswers >= 3) {
+  alert("You earned a silver crown!");
+} else if ( correctAnswers >= 1) {
+  alert("You earned a bronze crown!");
+} else {
+  alert("You received no crown. Try again!");
