@@ -1,0 +1,45 @@
+var friends = {
+    bill: {
+    firstName: "Bill",
+    lastName: "Gates",
+    number: "(555) 255-2555",
+    address: ['One Street Address','This City','OH','12345']
+    },
+    steve: {
+    firstName: "Steve",
+    lastName: "Jobs",
+    number: "(444) 244-2444",
+    address: ['Two Places','Our City','FL','54321']
+    }
+};
+
+var list = function (friends) {
+    for (var firstName in friends) {
+        console.log(firstName);
+    }
+}
+
+var search = function (name) {
+    for (var look in friends) {
+        if(friends[look].firstName === name) {
+            //console.log(friends[look]);
+            return friends[look];
+            }
+        }
+        return name;
+    };
+
+var format = function(obj) {
+    var str = "";
+    if (obj.length) {
+        str = "\nThe name, "+obj+", was not found.";
+    } else {
+        str = "\nName:    "+obj.firstName+" "+obj.lastName;
+        str += "\nNumber:  "+obj.number;
+        str += "\nAddress: "+obj.address.join(', ');
+    } console.log(str);
+};
+
+format(search("Bill"));
+format(search("Steve"));
+format(search("Joe"));
